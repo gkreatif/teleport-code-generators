@@ -109,7 +109,7 @@ const createVueNuxtGenerator = (generatorOptions: ProjectGeneratorOptions = {}) 
       staticFiles.push(manifestFile)
     }
 
-    const htmlIndexFile = createHtmlEntryFile(uidl, {
+    const htmlIndexFile = await createHtmlEntryFile(uidl, {
       assetsPrefix: ASSETS_PREFIX,
       appRootOverride: APP_ROOT_OVERRIDE,
     })

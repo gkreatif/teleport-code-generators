@@ -55,7 +55,7 @@ const createReactNextGenerator = (generatorOptions: ProjectGeneratorOptions = {}
     const routeNodes = extractRoutes(root)
 
     // Step 2: The root html file is customized in next via the _document.js page
-    const documentComponentFile = createDocumentFile(uidl)
+    const documentComponentFile = await createDocumentFile(uidl)
 
     // Step 2: The first level conditional nodes are taken as project pages
     const pagePromises = routeNodes.map((routeNode) => {
